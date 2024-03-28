@@ -15,3 +15,4 @@
 /* play again button (reset function) */
 /* make play again button invisible when
  game starts again */
+ // ...
