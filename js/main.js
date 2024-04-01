@@ -84,15 +84,21 @@
   ]
 
   /*----- state variables -----*/
-
+  let optionButtons;
+  let score;
 
   /*----- cached elements  -----*/
-
+  const questionsEl = document.getElementById('questions');
+  const optionButtonsEl = document.getElementById('option-buttons');
 
   /*----- event listeners -----*/
 
 
   /*----- functions -----*/
-  function init();
+  init();
+
+  function init () {
+
+  };
 
   function render();
