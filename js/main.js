@@ -1,84 +1,84 @@
   /*----- constants -----*/
   const questions = [
     {
-        question: 
+        question: "How many siblings does Killua Zoldyck have?"
         answers = [
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
+            {option: "3"       correct: false },      
+            {option: "4"       correct: true  },      
+            {option: "2"       correct: false },      
+            {option: '5'       correct: false },      
         ]
-    }
+    },
     {
-        question: 
+        question: "Why does Kurapika hate spiders?"
         answers = [
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
+            {option: "because they are creepy"                        correct: false },      
+            {option: "because he's weird"                             correct: false },      
+            {option: "because it reminds him of Phantom Troupe"       correct: true  },      
+            {option: "I don't know"                                   correct: false },      
         ]
-    }
+    },
     {
-        question: 
+        question: "What number is Hisoka's badge in the Hunter Exam?"
         answers = [
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
+            {option: "#44"       correct: true  },      
+            {option: "99"        correct: false },      
+            {option: "404"       correct: false },      
+            {option: "103"       correct: false },      
         ]
-    }
+    },
     {
-        question: 
+        question: "What Nen does Illumi have?"
         answers = [
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
+            {option: "Transmutation"        correct: false },      
+            {option: "Emuter"               correct: false },      
+            {option: "Specialization"       correct: false },      
+            {option: "Manipulation"         correct: true  },      
         ]
-    }
+    },
     {
-        question: 
+        question: "Who's the head of the Phantom Troupe?"
         answers = [
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
+            {option: "Ging Freecss"         correct: false },      
+            {option: "Chrollo Lucifer"      correct: true  },      
+            {option: "Franklin Bordeaux"    correct: false },      
+            {option: "Feitan"               correct: false },      
         ]
-    }
+    },
     {
-        question: 
+        question: "What is Kurapika's codename in the Zodiac?"
         answers = [
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
+            {option: "Rat"          correct: true  },      
+            {option: "Mouse"        correct: false },      
+            {option: "Rabbit"       correct: false },      
+            {option: "Dog"          correct: false },      
         ]
-    }
+    },
     {
-        question: 
+        question: "Who punched Ging Freecss on the face?"
         answers = [
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
+            {option: "Gon Freecss"          correct: false },      
+            {option: "Killua Zoldyck"       correct: false },      
+            {option: "Leorio"               correct: true  },      
+            {option: "Netero"               correct: false },      
         ]
-    }
+    },
     {
-        question: 
+        question: "Leorio wants to be a..."
         answers = [
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
+            {option: "Politician"       correct: false },      
+            {option: "Lawyer"           correct: false },      
+            {option: "Doctor"           correct: true  },      
+            {option: "Singer"           correct: false },      
         ]
-    }
+    },
     {
-        question: 
+        question: "What was the name Illumi used while taking the Hunter Exam?"
         answers = [
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
-            {option:        correct: },      
+            {option: "Hanzo"           correct: false },      
+            {option: "Pokkie"          correct: false },      
+            {option: "Ponta"           correct: false },      
+            {option: "Gittarackur"     correct: true  },      
         ]
     }
   ]
