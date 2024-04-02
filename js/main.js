@@ -88,7 +88,7 @@
   /*----- state variables -----*/
   let optionButtons;
   let score = 0;
-  let questionIdx = 0;
+  let currentQtnIdx = 0;
 
   /*----- cached elements  -----*/
   const questionsEl = document.getElementById('questions');
@@ -106,11 +106,20 @@
 
   function render();
 
+  function displayQtn () {
+    
+  }
+
   function selectAns (selectedOpt) {
     const currentQtn = questions[currentQuestionIdx];
     if (selectedOpt === currentQtn.correctAnswer) {
         resultEl.textContent = "Correct!";
+        optionButtons.classList.add("correct");
     } else {
         resultEl.textContent = "Incorrect!";
+        optionButtons.classList.add("incorrect");
+        // for highlighting the correct answer
+        const correctIdx = currentQtn.answers.indexOf(currentQtn.correctAnswer);
+        optionButtonsEl.childNodes[correctIdx].classList.add("correct")
     }
-  }
+  };
