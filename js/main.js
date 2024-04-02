@@ -83,24 +83,34 @@
     }
   ]
 
+  console.log(questions);
+
   /*----- state variables -----*/
   let optionButtons;
-  let score;
-  let playAgainBtn;
+  let score = 0;
+  let questionIdx = 0;
 
   /*----- cached elements  -----*/
   const questionsEl = document.getElementById('questions');
-  const optionButtonsEl = document.getElementById('option-buttons');
-  const playAgainEl = document.getElementById('play-again');
+  const optionButtonsEl = document.querySelectorAll('option-buttons');
+  const playAgainBtnEl = document.getElementById('play-again');
 
   /*----- event listeners -----*/
-
+  document.getElementById('option-buttons').addEventListener('click');
+  playAgainBtn.addEventListener('click');
 
   /*----- functions -----*/
   init();
 
-  function init () {
-
-  };
+  function init ();
 
   function render();
+
+  function selectAns (selectedOpt) {
+    const currentQtn = questions[currentQuestionIdx];
+    if (selectedOpt === currentQtn.correctAnswer) {
+        resultEl.textContent = "Correct!";
+    } else {
+        resultEl.textContent = "Incorrect!";
+    }
+  }
