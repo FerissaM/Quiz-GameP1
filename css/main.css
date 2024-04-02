@@ -17,3 +17,8 @@ body {
     margin: 100px;
 
 }
+
+#play-again {
+    display: grid;
+    margin: 100px;
+}

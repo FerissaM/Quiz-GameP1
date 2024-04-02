@@ -86,10 +86,12 @@
   /*----- state variables -----*/
   let optionButtons;
   let score;
+  let playAgainBtn;
 
   /*----- cached elements  -----*/
   const questionsEl = document.getElementById('questions');
   const optionButtonsEl = document.getElementById('option-buttons');
+  const playAgainEl = document.getElementById('play-again');
 
   /*----- event listeners -----*/
 
