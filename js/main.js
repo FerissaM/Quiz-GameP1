@@ -88,9 +88,11 @@
   let score = 0;
   
   /*----- cached elements  -----*/
-  const questionElement = document.getElementById('questions');
+  const startGameButton = document.getElementById('start-game');
+  const titleElement = document.getElementById('title');
+  const questionElement = document.getElementById('question');
   const optionsElement = document.getElementById('options');
-  const playAgainButtonn = document.getElementById('play-again');
+  const playAgainButton = document.getElementById('play-again');
 
   /*----- event listeners -----*/
 //   document.getElementById('options').addEventListener('click');
@@ -99,14 +101,41 @@
   /*----- functions -----*/
 
 function init() {
+    const startGameButton = document.getElementById('start-game');
+    const titleElement = document.getElementById('title');
+    const questionElement = document.getElementById('question');
+    const optionsElement = document.getElementById('options');
     const playAgainButton = document.getElementById('play-again');
+
+    startGameButton.addEventListener('click', startQuiz);
+    titleElement.style.display = 'block'; // show the title initially
+    questionElement.style.display = 'none'; // hide the question initially
+    optionsElement.style.display = 'none'; // hide the options initially
     playAgainButton.style.display = 'none'; // hide the play again button initially
 
+    shuffleQuestions(); // questions array would be shuffled every start of game
     startQuiz();
 }
 
+function shuffleQuestions() {
+    for (let i = questions.length - 1; i > 0; i--) {
+        const randomIndex = Math.floor(Math.random() * (i + 1));
+        [questions[i], questions[randomIndex]] = [questions[randomIndex], questions[i]];
+    }
+}
+
 function startQuiz() {
+    const startGameButton = document.getElementById('start-game');
+    startGameButton.style.display = 'none';
+    const titleElement = document.querySelector('h1');
+    titleElement.style.display = 'none'; // to hide the title when game starts
+    const questionElement = document.getElementById('question');
+    const optionsElement = document.getElementById('options');
+
+    shuffleQuestions();
     displayQuestion();
+    questionElement.style.display = 'block'; // show the question
+    optionsElement.style.display = 'block'; // show the options
 }
 
 function displayQuestion() {
@@ -122,7 +151,7 @@ function displayQuestion() {
         button.textContent = option.option;
         button.onclick = function() {
             checkAnswer(index);
-            disableButtons(optionsElement.querySelectorAll('.btn')); // Disable all buttons after an answer is chosen
+            disableButtons(optionsElement.querySelectorAll('.btn')); // dfisable all buttons after an answer is chosen
         };
         optionsElement.appendChild(button);
     });
@@ -163,7 +192,7 @@ function endQuiz() {
     const optionsElement = document.getElementById('options');
     const playAgainButton = document.getElementById('play-again');
     
-    questionElement.textContent = `Congrats! Your score is ${score} out of ${questions.length}`;
+    questionElement.textContent = `Congrats! Your score is ${score} out of ${questions.length + 1}`;
     optionsElement.innerHTML = '';
     playAgainButton.style.display = 'block'; // show the play again button
     
@@ -172,9 +201,15 @@ function endQuiz() {
 }
 
 function resetQuiz() {
+    const titleElement = document.querySelector('h1');
+    titleElement.style.display = 'block'; // show title when game resets
+    const playAgainButton = document.getElementById('play-again');
+    playAgainButton.style.display = 'none'; // hide the play again button
+
     currentQuestionIndex = 0;
     score = 0;
-    startQuiz();
+    shuffleQuestions(); // shuffle the questions array again
+    startQuiz(); 
 }
 
 function disableButtons(buttons) {

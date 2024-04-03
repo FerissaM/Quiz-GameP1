@@ -12,40 +12,49 @@ body {
     align-items: center;
 }
 
-#h1 {
+h1#title {
     font-size: 20px;
     margin-top: 0;
     margin-bottom: 50px;
 }
 
-h2 {
+h2#question {
     margin: 20px 100px;
     display: grid;
-    justify-content: center;
     align-items: center;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
-#options {
-    display: grid;
+.btn {
+    display: block;
     margin: 100px;
-    border-radius: 50px;
     margin-top: auto;
-    margin-bottom: auto;
-    padding: auto;
-    border: 10px;
-    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid limegreen;
+    border-radius: 10px;
     gap: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 15px;
 }
 
 #play-again {
-    display: grid;
+    display: block;
     margin: 15px 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid limegreen;
+    font-size: 15px;
+    padding: 10px 20px;
 }
 
 .btn.correct {
-    background-color: #8bc34a; /* green */
+    background-color: lightgreen;
 }
 
 .btn.incorrect {
-    background-color: #ff5722; /* red */
+    background-color: lightcoral;
 }
