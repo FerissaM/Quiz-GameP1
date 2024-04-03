@@ -97,9 +97,15 @@
 //   playAgainBtn.addEventListener('click');
 
   /*----- functions -----*/
-//   init();
 
-function startGame() {
+function init() {
+    const playAgainButton = document.getElementById('play-again');
+    playAgainButton.style.display = 'none'; // hide the play again button initially
+
+    startQuiz();
+}
+
+function startQuiz() {
     displayQuestion();
 }
 
@@ -116,11 +122,11 @@ function displayQuestion() {
         button.textContent = option.option;
         button.onclick = function() {
             checkAnswer(index);
+            disableButtons(optionsElement.querySelectorAll('.btn')); // Disable all buttons after an answer is chosen
         };
         optionsElement.appendChild(button);
     });
 }
-
 
 function checkAnswer(optionIndex) {
     const currentQuestion = questions[currentQuestionIndex];
@@ -132,33 +138,50 @@ function checkAnswer(optionIndex) {
         score++;
     } else {
         buttons[optionIndex].classList.add('incorrect');
-        for (let index = 0; i < currentQuestion.options.length; i++) {
-            if (currentQuestion.options[index].correct) {
-                buttons[index].classList.add('correct');
+        for (let i = 0; i < currentQuestion.options.length; i++) {
+            if (currentQuestion.options[i].correct) {
+                buttons[i].classList.add('correct');
                 break;
             }
         }
     }
 
     currentQuestionIndex++;
-    setTimeout(displayNxtQuestion, 1000);
+    setTimeout(displayNextQuestion, 1500);
 }
 
-function displayNxtQuestion() {
+function displayNextQuestion() {
     if (currentQuestionIndex < questions.length) {
         displayQuestion();
     } else {
-        endGame();
+        endQuiz();
     }
 }
 
-function endGame() { 
-    questionElement.textContent = `Quiz ended! Your score: ${score}/${questions.length}`;
-    optionsElement.innerHTML = '';
-    playAgainButton.style.display = 'block'; // Show the "Play Again!" button
+function endQuiz() {
+    const questionElement = document.getElementById('question');
+    const optionsElement = document.getElementById('options');
+    const playAgainButton = document.getElementById('play-again');
     
-    playAgainButton.removeEventListener('click', resetGame); // Remove existing event listener
-    playAgainButton.addEventListener('click', resetGame); // Add event listener
+    questionElement.textContent = `Congrats! Your score is ${score} out of ${questions.length}`;
+    optionsElement.innerHTML = '';
+    playAgainButton.style.display = 'block'; // show the play again button
+    
+    playAgainButton.removeEventListener('click', resetQuiz); // remove existing event listener
+    playAgainButton.addEventListener('click', resetQuiz); // add new one
 }
 
-startGame();
+function resetQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    startQuiz();
+}
+
+function disableButtons(buttons) {
+    buttons.forEach(button => {
+        button.disabled = true; // disable the buttons
+    });
+}
+
+// start the quiz
+init();
