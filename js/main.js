@@ -88,9 +88,9 @@
   let score = 0;
   
   /*----- cached elements  -----*/
-  // const questionsElement = document.getElementById('questions');
-//   const optionsElement = document.getElementById('options');
-//   const playAgainBtn = document.getElementById('play-again');
+  const questionElement = document.getElementById('questions');
+  const optionsElement = document.getElementById('options');
+  const playAgainButtonn = document.getElementById('play-again');
 
   /*----- event listeners -----*/
 //   document.getElementById('options').addEventListener('click');
@@ -119,6 +119,29 @@ function displayQuestion() {
         };
         optionsElement.appendChild(button);
     });
+}
+
+
+function checkAnswer(optionIndex) {
+    const currentQuestion = questions[currentQuestionIndex];
+    const selectedOption = currentQuestion.options[optionIndex];
+    const buttons = document.querySelectorAll('.btn');
+    
+    if (selectedOption.correct) {
+        buttons[optionIndex].classList.add('correct');
+        score++;
+    } else {
+        buttons[optionIndex].classList.add('incorrect');
+        for (let i = 0; i < currentQuestion.options.length; i++) {
+            if (currentQuestion.options[i].correct) {
+                buttons[i].classList.add('correct');
+                break;
+            }
+        }
+    }
+
+    currentQuestionIndex++;
+    setTimeout(displayNextQuestion, 1500);
 }
 
 startQuiz();
