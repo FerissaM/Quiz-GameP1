@@ -25,7 +25,7 @@ h2 {
     align-items: center;
 }
 
-#option-buttons {
+#options {
     display: grid;
     margin: 100px;
     border-radius: 50px;
