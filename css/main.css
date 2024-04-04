@@ -5,56 +5,97 @@
 
 body {
     height: 50vh;
-    margin: 75px;
-    display: grid;
+    margin: 0;
+    padding: 0;
+    display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
 }
 
-h1#title {
-    font-size: 20px;
+.quiz-container {
+    position: relative;
+    width: 90%;
+    max-width: 600vh;
+    margin: 2vmin auto 0; /* Adjusted margin */
+    padding: 20px;
+    border: 2px solid lightcoral;
+    border-radius: 10px;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.question-container {
+    margin-top: 20px;
+}
+
+.options-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow options to wrap to the next line if necessary */
+    justify-content: center; /* Center the options horizontally */
+    gap: 10px; /* Add spacing between options */
+}
+
+#title {
+    font-size: 20vh;
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 50vh;
 }
 
 h2#question {
-    margin: 20px 100px;
-    display: grid;
+    margin: 5%;
+    display: flex;
     align-items: center;
     text-align: center;
-    font-size: 25px;
-    margin-bottom: 20px;
+    font-size: 4vh;
+    margin-top: 20vh;
+    margin-bottom: 20dvh;
 }
 
 .btn {
-    display: block;
-    margin: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
     margin-top: auto;
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid limegreen;
+    border: 1px solid #dbb697;
+    background-color: #e8d4ca;
     border-radius: 10px;
     gap: 10px;
     width: 100%;
     cursor: pointer;
     font-size: 15px;
+    height: 5vh;
 }
 
 #play-again {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
     display: block;
     margin: 15px 100px;
     border-radius: 5px;
     cursor: pointer;
-    border: 1px solid limegreen;
+    border: 1px solid #dbb697;
+    background-color: #e8d4ca;
     font-size: 15px;
     padding: 10px 20px;
 }
 
 .btn.correct {
-    background-color: lightgreen;
+    background-color: #7ac280;
 }
 
 .btn.incorrect {
-    background-color: lightcoral;
+    background-color: #d17875;
+}
+
+button:hover {
+    color: #a1694d;
+    background-color: #e0a982;
 }
