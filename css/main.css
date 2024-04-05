@@ -61,18 +61,18 @@ h2#question {
     align-items: center;
     text-align: center;
     font-size: 4vh;
-    margin-top: 20vh;
-    margin-bottom: 20vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 
 .btn {
     display: flex;
+    line-height: 1vh;
     flex-wrap: wrap;
     justify-content: center;
-    margin: auto;
     margin-top: auto;
     margin-bottom: 10px;
-    padding: 2vh;
+    padding: 3vh;
     border: 1px solid #dbb697;
     background-color: #e8d4ca;
     border-radius: 50vh;
@@ -81,6 +81,13 @@ h2#question {
     cursor: pointer;
     font-size: 15px;
     height: 5vh;
+}
+
+#start-game {
+    border: 1px solid #dbb697;
+    border-radius: 5vh;
+    padding: 2vh;
+    background-color: #e8d4ca;
 }
 
 #play-again {
@@ -96,6 +103,11 @@ h2#question {
     background-color: #e8d4ca;
     font-size: 15px;
     padding: 10vh;
+}
+
+.quiz-image {
+    border: 3px solid #dbb697; 
+    border-radius: 30vh; 
 }
 
 .btn.correct {
