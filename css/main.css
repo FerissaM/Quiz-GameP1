@@ -91,18 +91,16 @@ h2#question {
 }
 
 #play-again {
-    display: flex;
-    position: absolute;
-    bottom: 20vh;
-    right: 20vh; 
-    display: block;
-    margin: auto;
-    border-radius: 10vh;
+    position: relative;
+    justify-content: center;
+    bottom: 20px;
+    right: 20px;
     cursor: pointer;
     border: 1px solid #dbb697;
+    border-radius: 20px;
     background-color: #e8d4ca;
     font-size: 15px;
-    padding: 10vh;
+    padding: 10px;
 }
 
 .quiz-image {
