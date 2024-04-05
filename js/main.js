@@ -215,6 +215,16 @@ document.addEventListener('DOMContentLoaded', function() {
   const playAgainButton = document.getElementById('play-again');
 
   /*----- functions -----*/
+  function renderPlayAgainButton() {
+    const playAgainButton = document.createElement('button');
+    playAgainButton.id = 'play-again';
+    playAgainButton.textContent = 'Play Again';
+    playAgainButton.style.display = 'none'; // Initially hide the button
+    playAgainButton.addEventListener('click', resetQuiz);
+    
+    document.body.appendChild(playAgainButton);
+}
+
   function init() {
     const titleElement = document.getElementById('title');
     const startGameButton = document.getElementById('start-game');
@@ -237,6 +247,8 @@ document.addEventListener('DOMContentLoaded', function() {
     questionElement.style.display = 'none';
     optionsElement.style.display = 'none';
     playAgainButton.style.display = 'none';
+
+    renderPlayAgainButton();
 }
 
 function shuffleQuestions() {
