@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
   /*----- constants -----*/
   const questions = [
     {
@@ -214,22 +215,28 @@
   const playAgainButton = document.getElementById('play-again');
 
   /*----- functions -----*/
-
-function init() {
-    const startGameButton = document.getElementById('start-game');
+  function init() {
     const titleElement = document.getElementById('title');
+    const startGameButton = document.getElementById('start-game');
+
+    // Log elements to console to verify selection
+    console.log(titleElement);
+    console.log(startGameButton);
+
+    // Add event listener to start game button
+    startGameButton.addEventListener('click', startQuiz);
+
+    // Display title and start game button
+    titleElement.style.display = 'block';
+    startGameButton.style.display = 'block';
+
+    // Hide question, options, and play-again button initially
     const questionElement = document.getElementById('question');
     const optionsElement = document.getElementById('options');
     const playAgainButton = document.getElementById('play-again');
-
-    startGameButton.addEventListener('click', startQuiz);
-    titleElement.style.display = 'block'; // show the title initially
-    questionElement.style.display = 'none'; // hide the question initially
-    optionsElement.style.display = 'none'; // hide the options initially
-    playAgainButton.style.display = 'none'; // hide the play again button initially
-
-    shuffleQuestions(); // questions array would be shuffled every start of game
-    startQuiz();
+    questionElement.style.display = 'none';
+    optionsElement.style.display = 'none';
+    playAgainButton.style.display = 'none';
 }
 
 function shuffleQuestions() {
@@ -343,3 +350,5 @@ function disableButtons(buttons) {
 
 // start the quiz
 init();
+
+});
