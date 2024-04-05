@@ -4,7 +4,7 @@
 }
 
 body {
-    height: 50vh;
+    height: 200vh;
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,19 +13,23 @@ body {
 }
 
 .quiz-container {
-    position: relative;
-    width: 90%;
-    max-width: 600vh;
-    margin: 2vmin auto 0; /* Adjusted margin */
-    padding: 20px;
-    border: 2px solid lightcoral;
-    border-radius: 10px;
-    background-color: white;
-    height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    gap: 1vmin;
+    position: relative;
+    width: 90%;
+    max-width: 100vh;
+    margin-top: vh;
+    margin: 0;
+    padding: 10vh;
+    border: 2px solid #dbb697;
+    border-radius: 10vh;
+    background-color: white;
+    min-height: auto;
+    max-height: fit-content;
 }
 
 .question-container {
@@ -40,9 +44,15 @@ body {
 }
 
 #title {
-    font-size: 20vh;
-    margin-top: 0;
-    margin-bottom: 50vh;
+    display: block;
+    font-size: 5vh;
+    margin: 1vh;
+    margin-top: 10vh;
+    margin-bottom: 20vh;
+    border-radius: 10vh;
+    height: 1%;
+    width: auto;
+    text-align: center;
 }
 
 h2#question {
@@ -52,7 +62,7 @@ h2#question {
     text-align: center;
     font-size: 4vh;
     margin-top: 20vh;
-    margin-bottom: 20dvh;
+    margin-bottom: 20vh;
 }
 
 .btn {
@@ -62,11 +72,11 @@ h2#question {
     margin: auto;
     margin-top: auto;
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 2vh;
     border: 1px solid #dbb697;
     background-color: #e8d4ca;
-    border-radius: 10px;
-    gap: 10px;
+    border-radius: 50vh;
+    gap: 10vh;
     width: 100%;
     cursor: pointer;
     font-size: 15px;
@@ -74,17 +84,18 @@ h2#question {
 }
 
 #play-again {
+    display: flex;
     position: absolute;
-    bottom: 20px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
+    bottom: 20vh;
+    right: 20vh; 
     display: block;
-    margin: 15px 100px;
-    border-radius: 5px;
+    margin: auto;
+    border-radius: 10vh;
     cursor: pointer;
     border: 1px solid #dbb697;
     background-color: #e8d4ca;
     font-size: 15px;
-    padding: 10px 20px;
+    padding: 10vh;
 }
 
 .btn.correct {
