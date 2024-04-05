@@ -237,6 +237,9 @@ function shuffleQuestions() {
         const randomIndex = Math.floor(Math.random() * (i + 1));
         [questions[i], questions[randomIndex]] = [questions[randomIndex], questions[i]];
     }
+
+     // Slice the shuffled array to contain only the first 10 questions
+    questions.splice(10);
 }
 
 function startQuiz() {
