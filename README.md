@@ -14,8 +14,11 @@ Your answer turns green when you got it right!
 Red if you got it wrong, and the right answer will turn green!
 <img src="https://imgur.com/0CBLKos.png">
 
-Your score will come out after playing the game, and able to play again!
-<img src="https://imgur.com/mWKAl7z.png">
+Your score will come out after playing the game, and able to play again! You win if you score 6 or more.
+<img src="https://imgur.com/DIYGNH1.png">
+
+And you lose if you score less!
+<img src="https://imgur.com/X8odvHa.png">
 
 # Technologies Used
 

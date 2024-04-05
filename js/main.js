@@ -334,13 +334,19 @@ function endQuiz() {
     const optionsElement = document.getElementById('options');
     const playAgainButton = document.getElementById('play-again');
     
-    questionElement.textContent = `Congrats! Your score is ${score} out of ${questions.length}`;
+    if (score >= 6) {
+        questionElement.textContent = `Congrats! You won with a score of ${score} out of ${questions.length}!`;
+    } else {
+        questionElement.textContent = `Sorry, you lost with a score of ${score} out of ${questions.length}.`;
+    }
+
     optionsElement.innerHTML = '';
     playAgainButton.style.display = 'block'; // show the play again button
     
     playAgainButton.removeEventListener('click', resetQuiz); // remove existing event listener
     playAgainButton.addEventListener('click', resetQuiz); // add new one
 }
+
 
 function resetQuiz() {
     const titleElement = document.querySelector('h1');
