@@ -1,9 +1,9 @@
 # Quiz-GameP1
 
-# <The Ultimate Hunter x Hunter Quiz!>
+# The Ultimate Hunter x Hunter Quiz!
 This is a game where the player is asked multiple questions about the animation film series, Hunter x Hunter! 
 
-# Screenshot
+# Screenshots
 
 Start of the Game!
 <img src="https://imgur.com/Sm2HuiS.png">
