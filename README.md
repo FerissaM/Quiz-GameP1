@@ -30,6 +30,7 @@ And you lose if you score less!
 - JavaScript
 - HTML
 - CSS
+- imgur
 
 # Getting Started
 
