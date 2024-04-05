@@ -15,7 +15,7 @@ Your answer turns green when you got it right!
 
 Red if you got it wrong, and the right answer will turn green!
 
-<img src="https://imgur.com/0CBLKos.png">
+<img src="https://imgur.com/WHsQItO.png">
 
 Your score will come out after playing the game, and able to play again! You win if you score 6 or more.
 
